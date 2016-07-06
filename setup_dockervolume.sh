@@ -19,5 +19,8 @@ systemctl daemon-reload
 systemctl enable azurefile-dockervolumedriver
 systemctl start azurefile-dockervolumedriver
 
+yum install -y docker
+
 /usr/bin/docker volume create -d azurefile --name jenkins -o share=jenkins
 
+/usr/bin/docker run -d -p 80:8080 -v jenkins:/var/jenkins_home jenkins
