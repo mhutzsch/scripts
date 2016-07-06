@@ -19,5 +19,5 @@ systemctl daemon-reload
 systemctl enable azurefile-dockervolumedriver
 systemctl start azurefile-dockervolumedriver
 
-docker volume create -d azurefile --name jenkins -o share=jenkins
+/usr/bin/docker volume create -d azurefile --name jenkins -o share=jenkins
 
